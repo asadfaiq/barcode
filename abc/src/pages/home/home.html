@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Ionic Blank
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  
+  <ion-item>
+    <ion-label fixed>Username</ion-label>
+    <ion-input type="text" [(ngModel)] ="qrData"></ion-input>
+  </ion-item>
+  <button ion-button (click) ="CreateCode">createCode</button>
+  <button ion-button (click) ="ScanCode()">scanCode</button>
+<ion-card *ngIf ="CreateCode">
+  
+
+<ion-card-content>
+<p>Value:{{ScannedCode}} </p>
+</ion-card-content>
+</ion-card>
+
+<ion-card *ngIf ="ScanedCode">
+<ion-card-content>
+  Result from scan :{{ScannedCode}}
+  </ion-card-content>
+</ion-card>
+
+
+</ion-content>
